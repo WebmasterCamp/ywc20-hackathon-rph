@@ -270,6 +270,7 @@ export default function SpeechToTextPage() {
           timerRef.current = null
         }
         setRecordingState('completed')
+        router.push('/speech-to-text/result')
       }
     }, 1000) // Slightly slower for more realistic chunk generation
   }, [recordingState])
