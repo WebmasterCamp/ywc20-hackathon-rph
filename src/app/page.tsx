@@ -1,9 +1,19 @@
+'use client'
+import NavigationBar from "@/components/NavigationBar";
+import Image from "next/image";
 import GhostNearMeSearchCard from "@/components/GhostNearMeSearchCard/GhostNearMeSearchCard";
 import GradientCard from "@/components/GradientCard/GradientCard";
-import NavigationBar from "@/components/NavigationBar";
-import './page.css';
+import './page.css'
+import { useState } from "react";
 
 export default function Home() {
+  const [searchQuery, setSearchQuery] = useState("")
+
+  const handleSearch = (query: string) => {
+    setTimeout(() => {
+      setSearchQuery(query)
+    }, 1000);
+  }
 
   const mockData = [
     {
@@ -21,7 +31,11 @@ export default function Home() {
     {
       title: "ตุ๊กตาผีในบ้านเช่า",
       description: "หลังจากย้ายเข้าบ้านเช่าใหม่ เด็กหญิงคนหนึ่งเริ่มพูดคุยกับตุ๊กตาตัวเก่าที่พบในห้องเก็บของ ก่อนจะเกิดเหตุการณ์ประหลาดขึ้นทุกคืน..."
-    }
+    },
+    {
+      title: "เงาลึกลับริมถนนพหลโยธิน",
+      description: "คืนหนึ่งขณะขับรถกลับบ้านบนถนนพหลโยธิน ฉันเห็นเงาดำสูงใหญ่ยืนอยู่ข้างทาง แม้จะขับผ่านไปแล้วแต่กระจกหลังก็ยังสะท้อนภาพเงานั้นที่เหมือนจะขยับเข้ามาใกล้ขึ้นเรื่อย ๆ... จนต้องเร่งเครื่องหนีโดยไม่กล้าหันกลับไปมองอีกเลย"
+    },
   ]
   return (
     <div className="main-container">
@@ -33,16 +47,24 @@ export default function Home() {
         </div>
         <div className="w-[80%] mx-auto">
           <div className="my-[80px]">
-            <GhostNearMeSearchCard />
+            <GhostNearMeSearchCard onSearch={handleSearch} />
           </div>
           <div>
             <div className="flex justify-between items-end mb-[40px]">
-              <div className="text-[32px] font-bold text-white">เรื่องเล่าจากทางบ้าน</div>
+              <div className={`text-[32px] font-bold ${searchQuery ? "text-red-500" : "text-white"}`}>
+                
+                {searchQuery ? `${searchQuery}` : "เรื่องเล่าจากทางบ้าน"} 
+                {searchQuery && (<span className="text-white">ใกล้ฉัน</span>)}</div>
               <div className="text-[20px] text-white">ดูทั้งหมด</div>
             </div>
 
             <div className="grid grid-cols-2 gap-[32px]">
-              {mockData.map((item) => (
+              {mockData.filter((item) => {
+                if (searchQuery === "บางเขน") {
+                  return item.title.toLowerCase().includes("พหลโยธิน")
+                }
+                return item.title.toLowerCase().includes(searchQuery.toLowerCase())
+              }).map((item) => (
                 <GradientCard title={item.title} description={item.description} key={item.title} />
               ))}
             </div>
