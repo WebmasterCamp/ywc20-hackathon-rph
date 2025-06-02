@@ -18,23 +18,23 @@ const siteUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Raphael - YWC20 Hackathon",
+    default: "ผีใกล้ฉัน.ไทย - YWC20 Hackathon",
     template: `%s | Raphael`,
   },
-  description: "Raphael - YWC20 Hackathon",
-  keywords: ["Raphael", "YWC20", "Hackathon", "Thailand", "Business", "Technology"],
-  authors: [{ name: "Raphael Team" }],
+  description: "ผีใกล้ฉัน.ไทย - YWC20 Hackathon",
+  keywords: ["ผีใกล้ฉัน.ไทย", "YWC20", "Hackathon", "Thailand", "Business", "Technology"],
+  authors: [{ name: "Rapheal Team" }],
   openGraph: {
-    title: "Raphael",
-    description: "Raphael - YWC20 Hackathon",
+    title: "ผีใกล้ฉัน.ไทย",
+    description: "ผีใกล้ฉัน.ไทย - YWC20 Hackathon",
     url: siteUrl,
-    siteName: "Raphael",
+    siteName: "ผีใกล้ฉัน.ไทย",
     images: [
       {
         url: `${siteUrl}/opengraph/og-preview.png`,
         width: 1200,
         height: 630,
-        alt: "Raphael Banner",
+        alt: "ผีใกล้ฉัน.ไทย Banner",
       },
     ],
     locale: "en_US",

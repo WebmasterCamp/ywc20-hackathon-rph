@@ -261,6 +261,7 @@ export default function SpeechToTextPage() {
           timerRef.current = null
         }
         setRecordingState('completed')
+        router.push('/speech-to-text/result')
       }
     }, 80)
   }, [recordingState])

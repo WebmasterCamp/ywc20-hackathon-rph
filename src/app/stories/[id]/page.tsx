@@ -3,7 +3,7 @@
 import { useParams } from "next/navigation"
 import NavigationBar from "@/components/NavigationBar"
 import Image from "next/image"
-import { Gift, Share } from "lucide-react"
+import { Gift, Share, Volume2 } from "lucide-react"
 
 export default function StoryPage() {
     const { id } = useParams<{ id: string }>()
@@ -18,9 +18,10 @@ export default function StoryPage() {
                     <div className="text-4xl font-bold text-white">
                         เสียงลึกลับในบ้านร้าง
                     </div>
-                    {/* Description */}
-                    <div className="text-2xl font-bold">
-                        TODO: AVATAR
+                    {/* Click to listen to audio */}
+                    <div className="cursor-pointer text-2xl font-bold text-white flex flex-row items-center justify-center gap-2">
+                        <Volume2 className="w-12 h-12" />
+                        <span>คลิกเพื่อฟังเสียง</span>
                     </div>
                     {/* Content Image */}
                     <div className="h-[399px]">
