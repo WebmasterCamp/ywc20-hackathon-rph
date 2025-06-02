@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
-import { Inter, IBM_Plex_Sans_Thai } from "next/font/google";
+import { Inter, Kanit } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
-  variable: "--font-geist-sans",
+  variable: "--font-inter",
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700"],
 });
 
-const ibmPlexSansThai = IBM_Plex_Sans_Thai({
-  variable: "--font-geist-mono",
-  subsets: ["thai"],
+const kanit = Kanit({
+  variable: "--font-kanit",
+  subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700"],
 });
 
@@ -56,7 +56,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${ibmPlexSansThai.variable} antialiased`}
+        className={`${inter.variable} ${kanit.variable} antialiased`}
       >
         {children}
       </body>
