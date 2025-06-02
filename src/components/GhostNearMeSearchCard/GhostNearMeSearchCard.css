@@ -1,0 +1,36 @@
+.ghost-near-me-search-card {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #4C0002, #050608);
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.ghost-near-me-search-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/search-card-splash.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.ghost-near-me-search-card > div {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+.ghost-near-me-search-card > div > div:last-child {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}

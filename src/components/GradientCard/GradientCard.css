@@ -1,0 +1,33 @@
+.gradient-card {
+    background: linear-gradient(to bottom, #4C0002, #050608);
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* .gradient-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/search-card-splash.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: 1;
+} */
+
+/* .gradient-card-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+} */
+
+.gradient-card-description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgb(196, 196, 196);
+} 
