@@ -1,8 +1,7 @@
-import NavigationBar from "@/components/NavigationBar";
-import Image from "next/image";
 import GhostNearMeSearchCard from "@/components/GhostNearMeSearchCard/GhostNearMeSearchCard";
 import GradientCard from "@/components/GradientCard/GradientCard";
-import './page.css'
+import NavigationBar from "@/components/NavigationBar";
+import './page.css';
 
 export default function Home() {
   return (
