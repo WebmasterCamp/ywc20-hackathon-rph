@@ -56,7 +56,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${kanit.variable} antialiased`}
+        className={`${inter.className} ${kanit.className} antialiased`}
       >
         {children}
       </body>
