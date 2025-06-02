@@ -27,7 +27,7 @@ const AudioWaveform = ({ isActive }: { isActive: boolean }) => {
           key={i}
           className={`w-1 bg-white/60 rounded-full transition-all duration-150 ${
             isActive 
-              ? `animate-pulse h-${Math.floor(Math.random() * 8) + 8}` 
+              ? `animate-pulse h-10` 
               : 'h-4'
           }`}
           style={{ 
@@ -70,7 +70,7 @@ const RecordingInterface = ({
           className="cursor-pointer group relative bg-gradient-to-br from-red-500 to-red-700 hover:from-red-400 hover:to-red-600 rounded-full p-6 transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl"
         >
           <Mic className="w-16 h-16 text-white" />
-          <div className="absolute inset-0 rounded-full bg-red-400/20 animate-ping" />
+          <div className="absolute inset-0 rounded-full bg-red-400/20" />
         </button>
         <p className="text-white/80 text-lg font-medium">แตะเพื่อเริ่มบันทึกเสียง</p>
       </div>
@@ -80,9 +80,9 @@ const RecordingInterface = ({
   return (
     <div className="flex flex-col items-center gap-6">
       {/* Waveform visualization */}
-      {/* <div className="bg-black/30 rounded-2xl px-8 py-4 backdrop-blur-sm">
+      <div className="bg-black/30 rounded-2xl px-8 py-4 backdrop-blur-sm">
         <AudioWaveform isActive={state === 'recording'} />
-      </div> */}
+      </div>
 
       {/* Control buttons */}
       <div className="flex items-center gap-4">
