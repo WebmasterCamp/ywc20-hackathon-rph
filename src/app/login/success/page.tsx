@@ -7,7 +7,7 @@ export default function LoginSuccess() {
 
   const handleLogout = () => {
     // ในอนาคตจะใส่ logic logout ที่นี่
-    router.push('/login'); // กลับไปหน้า login
+    router.push('/'); // กลับไปหน้า login
   };
 
   return (

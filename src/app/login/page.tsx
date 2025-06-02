@@ -21,14 +21,14 @@ export default function LoginPage() {
     setSuccess(true);
 
     // หลังจาก login สำเร็จ redirect ไปหน้า /home
-    router.push('/login/success');
+    router.push('/');
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-black to-red-900 p-4">
       <form onSubmit={handleSubmit} className="bg-black/80 p-10 rounded-2xl w-full max-w-md text-white">
         <h1 className="flex text-[20px] font-semibold mb-2 items-center justify-center">
-          <img src="/Mask group.png" alt="" className='w-[37px] h-[37px]'/>
+          <img src="/logo.png" alt="" className='w-[37px] h-[37px]'/>
           หาผีใกล้ฉัน</h1>
           <div  className='text-center'>เข้าสู่ระบบ </div>
 
