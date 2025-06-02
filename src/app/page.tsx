@@ -4,6 +4,25 @@ import NavigationBar from "@/components/NavigationBar";
 import './page.css';
 
 export default function Home() {
+
+  const mockData = [
+    {
+      title: "เสียงลึกลับในบ้านร้าง",
+      description: "แค่เล่นหยอกกับเพื่อนว่าจะไปล่าท้าผีทว่ากลับเจอเรื่องสุดสยองในบ้านร้าง..."
+    },
+    {
+      title: "เงาปริศนาใต้สะพาน",
+      description: "ทุกคืนวันพระจะมีเสียงร้องไห้ดังมาจากใต้สะพานเก่า ไม่มีใครกล้าเข้าใกล้จนกระทั่งวันหนึ่งมีเด็กกลุ่มหนึ่งหายตัวไป..."
+    },
+    {
+      title: "เสียงกระซิบในห้องเรียนร้าง",
+      description: "นักเรียนที่อยู่เวรดึกมักได้ยินเสียงกระซิบชื่อของตัวเองจากห้องเรียนที่ปิดตายมานานหลายปี..."
+    },
+    {
+      title: "ตุ๊กตาผีในบ้านเช่า",
+      description: "หลังจากย้ายเข้าบ้านเช่าใหม่ เด็กหญิงคนหนึ่งเริ่มพูดคุยกับตุ๊กตาตัวเก่าที่พบในห้องเก็บของ ก่อนจะเกิดเหตุการณ์ประหลาดขึ้นทุกคืน..."
+    }
+  ]
   return (
     <div className="main-container">
       <div className="main-content">
@@ -23,10 +42,9 @@ export default function Home() {
             </div>
 
             <div className="grid grid-cols-2 gap-[32px]">
-              <GradientCard title="เรื่องเล่าจากทางบ้าน" description="เรื่องเล่าจากทางบ้าน" />
-              <GradientCard title="เรื่องเล่าจากทางบ้าน" description="เรื่องเล่าจากทางบ้าน" />
-              <GradientCard title="เรื่องเล่าจากทางบ้าน" description="เรื่องเล่าจากทางบ้าน" />
-              <GradientCard title="เรื่องเล่าจากทางบ้าน" description="เรื่องเล่าจากทางบ้าน" />
+              {mockData.map((item) => (
+                <GradientCard title={item.title} description={item.description} key={item.title} />
+              ))}
             </div>
           </div>
         </div>
