@@ -1,4 +1,4 @@
-/* .ghost-near-me-search-card {
+.ghost-near-me-search-card {
     width: 100%;
     height: 100%;
     background: linear-gradient(to bottom, #4C0002, #050608);
@@ -19,18 +19,5 @@
     background-size: cover;
     background-position: center;
     opacity: 0.3;
-    z-index: 1;
-} */
-
-.ghost-near-me-search-card > div {
-    position: relative;
-    z-index: 0;
-    color: white;
-}
-
-.ghost-near-me-search-card > div > div:last-child {
-    margin-top: 20px;
-    font-size: 16px;
-    line-height: 1.5;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: -1;
 }
